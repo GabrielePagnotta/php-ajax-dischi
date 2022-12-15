@@ -1,3 +1,5 @@
+<!-- seconda versone -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,57 +16,25 @@
 </head>
 <body>
     <div id="app">
-        <header>
-            <div class="container-fluid d-flex bg-primary align-items-center">
+        <header class="bg-header">
+            <div class="container-fluid d-flex align-items-center">
                 <img class="width-img p-2" src="./assets/img/logo-small.svg" alt="">
                 <ul>
-                    <li class="text-white m-2">ciao</li>
-                    <li class="text-white m-2">ciao</li>
-                    <li class="text-white m-2">ciao</li>
-                    <li class="text-white m-2">ciao</li>
+                    <li class="text-white m-2" v-for="(el,index) in arraigeneri" :key="index">{{el}}</li>
+                    
                 </ul>
             </div>
         </header>
 
-        <main>
-            <div class="container d-flex bg-warning">
-                <div class="card" style="width: calc(100% / 4);">
-                    <img src="..." class="card-img-top" alt="...">
+        <main class="bg-main vh-100">
+            <div class="container d-flex flex-wrap justify-content-center"  >
+                <div class="card m-2 bg-cards" style="width: calc(100% / 5);" v-for="(element,index) in arrainfo" :key="index">
+                    <img :src="element.poster" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title text-white text-center">{{element.title}}</h5>
+                      <p class="card-text text-center text-white">{{element.author}}</p>
+                      
                     </div>   
-                  </div>
-
-                  <div class="card" style="width: calc(100% / 4);">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>   
-                  </div>
-
-                  <div class="card" style="width: calc(100% / 4);">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>   
-                  </div>
-
-                  <div class="card" style="width: calc(100% / 4);">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>   
-                  </div>
-
-                 
                   </div>
                     
             </div>

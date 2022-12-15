@@ -13,3 +13,15 @@ li{
     float: left;
 }
 
+.bg-header{
+    background-color: #283038;
+}
+
+.bg-main{
+    background-color: #1E2D3B;
+}
+
+.bg-cards{
+    background-color: #2E3A46;
+}
+
